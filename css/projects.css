@@ -14,7 +14,7 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
-    padding: 20px;
+    padding-top: 40px;
 }
 
 .grid__container > div {
@@ -60,7 +60,6 @@
         "productpic movingart project2"
         "productpic animation pentool";
         gap: 20px;
-        padding: 40px;
     }
 
 

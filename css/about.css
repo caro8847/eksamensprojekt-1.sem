@@ -10,6 +10,11 @@
     padding: 20px 60px 40px 60px;
 }
 
+.about__text h2{
+    margin-bottom: 5%;
+    text-align: center;
+}
+
 .about__image img{
     height: 250px;
     width: fit-content;

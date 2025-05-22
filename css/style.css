@@ -57,6 +57,7 @@ a{
 
 /*css til header - Lavet efter denne video: https://www.youtube.com/watch?v=U8smiWQ8Seg */
 header{
+    width: 100%;
     background-color: #F5F3F3;
     position: sticky;
     top: 0;
@@ -157,4 +158,3 @@ footer{
     margin-left: 50px;
     padding-bottom: 15px;
 }
-
