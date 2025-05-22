@@ -122,6 +122,12 @@ nav a:hover{
     display: none;
 }
 
+@media(max-width:450px){
+    .nav__sidebar{
+        width: 100%;
+    }
+}
+
 @media(max-width:635px){
     .nav__link--hidden{
         display:none;
@@ -130,11 +136,7 @@ nav a:hover{
         display: block;
     }
 }
-@media(max-width:450px){
-    .nav__sidebar{
-        width: 100%;
-    }
-}
+
 
 /*css til sidebar-karrusel overlap - med hjælp fra chatGPT*/
 body.sidebar-visible main {
