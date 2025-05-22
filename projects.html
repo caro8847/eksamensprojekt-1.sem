@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!--stylesheet til font-->
+            <!--h font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+            <!--p font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--Lavet efter denne video: https://www.youtube.com/watch?v=U8smiWQ8Seg -->
+    <header>
+        <nav>
+            <ul class="nav__sidebar">
+                <li onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#1f1f1f"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                <li><a href="about.html">Om mig</a></li>
+                <li><a href="projects.html">Portfolio</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+            </ul>
+            <ul>
+                <li class="nav__logo"><a href="index.html"><img src="img/logo.svg" alt="Logo" height="55" width="55"></a></li>
+                <li class="nav__link--hidden"><a href="about.html">Om mig</a></li>
+                <li class="nav__link--hidden"><a href="projects.html">Portfolio</a></li>
+                <li class="nav__link--hidden"><a href="contact.html">Kontakt</a></li>
+                <li class="nav__menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 -960 960 960" width="35px" fill="#1f1f1f"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="page__title">
+            <h1>Portfolio</h1>
+        </div>
+        <div class="projects">
+            <div class="projects__text">
+                <p>Min portfolio byder på en udpluk af opgaver og projekter jeg har beskæftiget mig med i min tid på studiet, og viser noget af det jeg kan lave med de værktøjer jeg har til rådighed.</p>
+                <p class="projects__text--big-screen">Hover over projekt-billederne for at læse mere om projektet, læringsudbyttet og anvendte værktøjer.</p>
+            </div>
+            <div class="grid__container">
+                <div class="grid__container--project1">
+                    <img src="img/projects/re-design.jpg" alt="Re-desing af hjemmeside prototype">
+                    <div class="grid__container--text">
+                        <h3>Redesign af hjemmeside</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum odio esse dolore! Voluptatem aspernatur odio, ea totam modi veritatis dolor, delectus qui suscipit odit maiores non! Voluptatibus ullam repudiandae voluptatum?</p>
+                    </div>
+                </div>
+                <div class="grid__container--project2">
+                    <img src="img/projects/ar-prototype.jpg" alt="AR prototype">
+                    <div class="grid__container--text">
+                        <h3>AR prototype</h3>
+                        <p>2. projekt lød på, at vi skulle udarbejde en digital, interaktiv installation for Økolariets yngste besøgende. <br><br> Jeg havde flere opgaver i forbindelse med projektet, men den mest prominente var, udarbejdelsen af prototypen. <br><br> I løbet af projektet har jeg lært et nyt Adobe program at kende samt udvidet mit kendskab til AI og brugen af samme. <br><br> Til prototypen, er AI blevet brugt til at generere billedet og animere den, så den bevægede sig, og dermed blev mere engagerende. Der er desuden blevet brugt tekst til tale. AI er <strong>ikke</strong> blevet brugt til at gøre prototypen interaktiv.</p>
+                    </div>
+                </div>
+                <div class="grid__container--productpic">
+                    <img src="img/projects/productpic.jpg" alt="produktbillede">
+                    <div class="grid__container--text">
+                        <h3>Produktbillede</h3>
+                        <p>Vi har i undervisningen arbejdet med fotografering, her har vi haft et fokus på produktbilleder. <br><br> I forbindelse med fotograferingen har jeg opnået praktisk erfaring med at indstille et kamera samt, hvordan man arbejder med lys og komposition. <br><br> Jeg har efterfølgende også redigeret produktbilledet en smule, således at farverne blev mere fremtrædende, og på den måde virke mere tiltalende.</p>
+                    </div>
+                </div>
+                <div class="grid__container--movingart">
+                    <video src="vid/moving_art.mp4" controls></video>
+                    <div class="grid__container--text">
+                        <h3>Moving Art</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam consequuntur eum, ut sequi aliquam vero consectetur iure modi voluptas hic, sunt ducimus doloribus nulla fugiat sit inventore quaerat neque optio.</p>
+                    </div>
+                </div>
+                <div class="grid__container--animation">
+                    <video src="vid/css_animation.mp4" controls></video>
+                    <div class="grid__container--text">
+                        <h3>CSS animation</h3>
+                        <p>Workshoppens opgave lød på, at vi skulle lave et spritesheet, og kode det, så vi endte ud med en animation, der gerne skulle være et loop. <br><br> Under workshoppen fik jeg erfaring med, hvordan man anvendte css til at lave en animation.</p>
+                    </div>
+                </div>
+                <div class="grid__container--pentool">
+                    <img src="img/projects/selfportrait.svg" alt="Pen-tool protræt">
+                    <div class="grid__container--text">
+                        <h3>Pen-tool portræt</h3>
+                        <p>For at øve brugen af pen-tool, fik vi tildelt en frivillig hjemmeopgave, som gik ud på, at vi skulle bruge pen-tool til at lave et selvportræt ud fra et billede. <br><br> Jeg valgte at beholde portrættet uden farve, da jeg blev glad for resultatet.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer__title">
+            <h3>Kontakt mig</h3>
+        </div>
+        <div class="footer__contact-info">
+            <p>Mobil: +45 42 44 63 65</p>
+            <p>Mail: carolinestiepernielsen@gmail.com</p>
+        </div>
+    </footer>
+    <!--JavaScript til header fra samme video, men hjælp fra chatGPT mht. sidebar-->
+    <script>
+        function showSidebar(){
+            const sidebar = document.querySelector('.nav__sidebar');
+            sidebar.style.display = 'flex';
+            document.body.classList.add('sidebar-visible');
+        }
+
+        function hideSidebar(){
+            const sidebar = document.querySelector('.nav__sidebar');
+            sidebar.style.display = 'none';
+            document.body.classList.remove('sidebar-visible');
+        }
+    </script>
+</body>
+</html>

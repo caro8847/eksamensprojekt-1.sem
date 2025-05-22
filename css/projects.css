@@ -1,0 +1,138 @@
+.page__title{
+    text-align: center;
+    padding: 30px 30px 0px 30px;
+}
+
+.projects{
+    padding: 20px 60px 40px 60px;
+}
+.projects__text{
+    padding-right: 20px;
+}
+
+.grid__container{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.grid__container > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #C4CFBD;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.grid__container > div img,
+.grid__container >div video {
+    max-width: 80%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.grid__container h3{
+    text-align: center;
+}
+
+.grid__container--text{
+    padding: 10px 30px;
+    text-align: start;
+}
+
+.projects__text--big-screen{
+    display: none;
+}
+
+/*startet selv, hjælp fra ChatGPT*/
+@media (min-width:1366px){
+    .grid__container {
+        display: grid;
+        aspect-ratio: 1 / 1; 
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas:
+        "project1 project1 project2"
+        "productpic movingart project2"
+        "productpic animation pentool";
+        gap: 20px;
+        padding: 40px;
+    }
+
+
+    .grid__container > div {
+        background-color: #D3A4DB;
+        border-radius: 15px;
+        overflow: hidden;
+        padding: 10px;
+    }
+
+    .grid__container img,video {
+        min-width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    
+    .grid__container--project1{
+        grid-area: project1;
+    }
+    
+    .grid__container--project2{
+        grid-area: project2;
+    }
+    
+    .grid__container--productpic{
+        grid-area: productpic;
+    }
+
+    .grid__container--movingart{
+        grid-area: movingart;
+    }
+    
+    .grid__container--animation{
+        grid-area: animation;
+    }
+    
+    .grid__container--pentool{
+        grid-area: pentool;
+    }
+
+    .projects__text--big-screen{
+        display: flex;
+    }
+    
+
+    /*ChatGPT*/
+    .grid__container > div {
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .grid__container--text {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        right: 10px;
+        margin: 0;
+        padding: 10px;
+        background: rgba(255, 255, 255, 0.85);
+        color: #000;
+        border-radius: 10px;
+        text-align: start;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        
+    }
+    
+            /* Vises kun ved hover på projektet */
+    .grid__container > div:hover .grid__container--text {
+        opacity: 1;
+        visibility: visible;
+    }
+}

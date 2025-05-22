@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+html{
+    height: 100%;
+}
+
+
+body{
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #F5F3F3;
+    color: #1f1f1f
+}
+
+main{
+    flex: 1;/*main flyder ekstra plads, så footer er i bunden*/
+}
+
+/*fluid typography lavet med chatGPT*/
+h1, h2, h3, h5{
+    font-family: "Poppins", sans-serif;
+}
+
+h1 {
+    font-size: clamp(2rem, 5vw, 3rem);   /* skalerer mellem 32px og 48px */
+    font-weight: 700;
+}
+  
+h2 {
+    font-size: clamp(1.5rem, 3.5vw, 1.875rem); /* skalerer mellem 24px og 30px */
+    font-weight: 600;
+}
+  
+h3 {
+    font-size: clamp(1.125rem, 2vw, 1.25rem);  /* skalerer mellem 18px og 20px */
+    font-weight: 500;
+}
+
+p{
+    font-family: "Alexandria", sans-serif;
+    font-size: 1rem; /* fast 16px, men kan også laves fluid om ønsket */
+    font-weight: 400;
+    color: #2A2A2A;
+}  
+
+a{
+    font-family: "Alexandria", sans-serif;
+    font-size: clamp(1.125rem, 2vw, 1.25rem);  /* skalerer mellem 18px og 20px */
+    font-weight: 450;
+    color: #2A2A2A;
+}
+
+/*css til header - Lavet efter denne video: https://www.youtube.com/watch?v=U8smiWQ8Seg */
+header{
+    background-color: #F5F3F3;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 15px 30px;
+}
+
+nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav li{
+    height: 50px;
+}
+nav a{
+    height: 100%;
+    padding: 0px 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #1f1f1f;
+}
+
+nav a:hover{
+    text-decoration: underline;
+    text-decoration-color: #F8681D;
+    text-decoration-thickness: 2px;
+}
+
+.nav__logo{
+    margin-right: auto;
+}
+    /*fra videoen, med lidt hjælp fra ChatGPT*/
+.nav__sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 250px;
+    /*z-index -> sidebar altid er over alt andet*/
+    z-index: 999;
+    background-color: #C4CFBD;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.nav__sidebar li{
+    width: 100%;
+}
+
+.nav__sidebar a{
+    width: 100%;
+}
+
+.nav__menu-button{
+    display: none;
+}
+
+@media(max-width:635px){
+    .nav__link--hidden{
+        display:none;
+    }
+    .nav__menu-button{
+        display: block;
+    }
+}
+@media(max-width:450px){
+    .nav__sidebar{
+        width: 100%;
+    }
+}
+
+/*css til sidebar-karrusel overlap - med hjælp fra chatGPT*/
+body.sidebar-visible main {
+    padding-right: 250px; /* samme bredde som sidebar */
+} 
+
+/*css til footer*/
+footer{
+    display: flex;
+    flex-direction: column;
+    background-color: #F8681D;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.footer__title{
+    margin: 10px 0 0 30px
+}
+
+.footer__contact-info{
+    margin-left: 50px;
+    padding-bottom: 15px;
+}
+

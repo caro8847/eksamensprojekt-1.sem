@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caroline Nielsen//portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!--stylesheet til font-->
+            <!--h font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+            <!--p font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--Lavet efter denne video: https://www.youtube.com/watch?v=U8smiWQ8Seg -->
+    <header>
+        <nav class="nav">
+            <ul class="nav__sidebar">
+                <li onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#1f1f1f"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                <li><a href="about.html">Om mig</a></li>
+                <li><a href="projects.html">Portfolio</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+            </ul>
+            <ul>
+                <li class="nav__logo"><a href="index.html"><img src="img/logo.svg" alt="Logo" height="45" width="45"></a></li>
+                <li class="nav__link--hidden"><a href="about.html">Om mig</a></li>
+                <li class="nav__link--hidden"><a href="projects.html">Portfolio</a></li>
+                <li class="nav__link--hidden"><a href="contact.html">Kontakt</a></li>
+                <li class="nav__menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#1f1f1f"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="page__title">
+            <h1>Caroline Nielsen</h1>
+        </div>
+        <div class="index">
+            <div class="index__img">
+                <img src="img/portrait.jpg" alt="portræt af mig"> 
+            </div>
+            <div class="index__text">
+                <div class="index__about">
+                    <h2>Velkommen til min portfolio</h2>
+                    <p>Mit navn er Caroline, jeg er 20 år og studerer multimediedesign. Jeg elsker at skabe og være kreativ, og lige netop derfor har jeg valgt uddannelsen. Min kærlighed for æstetik stikker dybt, og min interesse for kodning er stadig voksende.</p>
+                        <br>
+                    <p>Kig endelig rundt – og kontakt mig gerne, hvis du vil vide mere eller har lyst til at samarbejde.</p>
+                </div>
+                <div class="index__button">
+                    <a href="contact.html" class="index__button--contact">Tag kontakt</a>
+                    <a href="about.html" class="index__button--about">Lær mig at kende</a>
+                </div>
+            </div>
+        </div>
+        <div class="index__project-title">
+            <h3>Fremhævede projekter</h3>
+        </div>
+        <div class="carousel__wrapper">
+            <div class="carousel__track">
+                <img src="img/projects/re-design.jpg" alt="Projekt 1">
+                <img src="img/projects/ar-prototype.jpg" alt="Projekt 2">
+                <img src="img/projects/productpic.jpg" alt="Produktbillede">
+                <img src="img/projects/selfportrait.svg" alt="Pen-tool portræt">
+                    <!--duplikeret for et seamless look-->
+                <img src="img/projects/re-design.jpg" alt="Projekt 1">
+                <img src="img/projects/ar-prototype.jpg" alt="Projekt 2">
+                <img src="img/projects/productpic.jpg" alt="Produktbillede">
+                <img src="img/projects/selfportrait.svg" alt="Pen-tool portræt">
+                    <!--duplikeret for et seamless look-->
+                <img src="img/projects/re-design.jpg" alt="Projekt 1">
+                <img src="img/projects/ar-prototype.jpg" alt="Projekt 2">
+                <img src="img/projects/productpic.jpg" alt="Produktbillede">
+                <img src="img/projects/selfportrait.svg" alt="Pen-tool portræt">
+            </div>
+        </div>
+        <div class="index__button">
+            <a href="projects.html" class="index__button--projects">Se flere projekter</a>
+        </div>
+    </main>
+    <footer>
+        <div class="footer__title">
+            <h3>Kontakt mig</h3>
+        </div>
+        <div class="footer__contact-info">
+            <p>Mobil: +45 42 44 63 65</p>
+            <p>Mail: carolinestiepernielsen@gmail.com</p>
+        </div>
+    </footer>
+    <!--JavaScript til header fra samme video, men hjælp fra chatGPT mht. sidebar-->
+    <script>
+        function showSidebar(){
+            const sidebar = document.querySelector('.nav__sidebar');
+            sidebar.style.display = 'flex';
+            document.body.classList.add('sidebar-visible');
+        }
+
+        function hideSidebar(){
+            const sidebar = document.querySelector('.nav__sidebar');
+            sidebar.style.display = 'none';
+            document.body.classList.remove('sidebar-visible');
+        }
+    </script>
+</body>
+</html>

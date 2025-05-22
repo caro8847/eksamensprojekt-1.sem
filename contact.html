@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!--stylesheet til font-->
+            <!--h font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+            <!--p font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--Lavet efter denne video: https://www.youtube.com/watch?v=U8smiWQ8Seg -->
+    <header>
+        <nav>
+            <ul class="nav__sidebar">
+                <li onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#1f1f1f"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                <li><a href="about.html">Om mig</a></li>
+                <li><a href="projects.html">Portfolio</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+            </ul>
+            <ul>
+                <li class="nav__logo"><a href="index.html"><img src="img/logo.svg" alt="Logo" height="45" width="45"></a></li>
+                <li class="nav__link--hidden"><a href="about.html">Om mig</a></li>
+                <li class="nav__link--hidden"><a href="projects.html">Portfolio</a></li>
+                <li class="nav__link--hidden"><a href="contact.html">Kontakt</a></li>
+                <li class="nav__menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#1f1f1f"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="contact">
+            <div class="contact__title">
+                <h1>Kontakt</h1>
+            </div>
+            <div class="contact__content">
+                <div class="contact__info-block">
+                    <div class="contact__text">
+                        <p>Hvis du har nogle spørgsmål, ønsker mere viden om mig og min kunnen eller bare har lyst til at sige hej, er du altid velkommen til at kontakte mig. Jeg ser frem til at høre fra dig, og håber på muligheden for et samarbejde.</p>
+                    </div>
+                    <div class="contact__details">
+                        <h5>Mobil: +45 42 44 63 65</h5>
+                        <h5>Mail: carolinestiepernielsen@gmail.com</h5>
+                    </div>
+                </div>
+                <div class="contact__image">
+                    <img src="img/portrait.jpg" alt="portræt af mig">
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer__title">
+            <h3>Kontakt mig</h3>
+        </div>
+        <div class="footer__contact-info">
+            <p>Mobil: +45 42 44 63 65</p>
+            <p>Mail: carolinestiepernielsen@gmail.com</p>
+        </div>
+    </footer>
+    <!--JavaScript til header fra samme video, men hjælp fra chatGPT mht. sidebar-->
+    <script>
+        function showSidebar(){
+            const sidebar = document.querySelector('.nav__sidebar');
+            sidebar.style.display = 'flex';
+            document.body.classList.add('sidebar-visible');
+        }
+
+        function hideSidebar(){
+            const sidebar = document.querySelector('.nav__sidebar');
+            sidebar.style.display = 'none';
+            document.body.classList.remove('sidebar-visible');
+        }
+    </script>
+</body>
+</html>
