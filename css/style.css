@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    border: 1px solid #F8681D;
     
 }
 html{
@@ -15,6 +16,12 @@ body{
     flex-direction: column;
     background-color: #F5F3F3;
     color: #1f1f1f
+}
+
+.nav__link--selected{
+    text-decoration: underline;
+    text-decoration-color: #F8681D;
+    text-decoration-thickness: 2px;
 }
 
 main{
@@ -53,6 +60,7 @@ a{
     font-size: clamp(1.125rem, 2vw, 1.25rem);  /* skalerer mellem 18px og 20px */
     font-weight: 450;
     color: #2A2A2A;
+    text-decoration: none;
 }
 
 /*css til header - Lavet efter denne video: https://www.youtube.com/watch?v=U8smiWQ8Seg */
@@ -146,17 +154,35 @@ body.sidebar-visible main {
 /*css til footer*/
 footer{
     display: flex;
-    flex-direction: column;
-    background-color: #F8681D;
+    flex-direction: row;
+    background-color: #C4CFBD;
     width: 100%;
     margin-top: 30px;
+    justify-content: space-between;
 }
 
 .footer__title{
-    margin: 10px 0 0 30px
+    margin: 10px 0 0 60px
 }
 
 .footer__contact-info{
-    margin-left: 50px;
+    margin-left: 120px;
     padding-bottom: 15px;
+}
+
+.footer__links{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    margin-right: 30px;
+}
+
+footer a{
+    height: 100%;
+    padding: 0px 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #1f1f1f;
 }
