@@ -28,7 +28,8 @@
 .index__img img{
     height: auto;
     width: 80%;
-    border-radius: 50%/40%;
+    min-width: 120px;
+    border-radius: 50%/40%; /*50% af bredden og 40% af højden er brugt til afrunding - oval*/
 }
 
 
@@ -85,12 +86,39 @@
     color: #D3A4DB;
 }
 
+.index__cta{
+    display: flex;
+    flex-direction: column;
+    background-color: #C4CFBD;
+    align-items: center;
+    padding: 60px;
+    margin-top: 10%;
+    text-align: center;
+}
+
+.index__cta--button{
+    background-color: #F8681D;
+    border: 2px solid #F8681D ;
+    color: #F5F3F3;
+    border-radius: 10px;
+    text-decoration: none;
+    text-align: center;
+    width: auto;
+    padding: 5px;
+    margin-top: 20px;
+}
+
+.index__cta--button:hover{
+    background-color: #F5F3F3;
+    color: #F8681D;
+}
+
 /*css til karrusel fra: https://www.youtube.com/shorts/IU8gFtgSxDw */
 .carousel__wrapper{
     z-index: 1;
     overflow: hidden;
     width: 100%;
-    margin: 15px 0 15px 0;
+    margin: 15px 0px 15px 0px;
 }
 
 .carousel__track{
@@ -112,7 +140,7 @@
 
 @keyframes animation{
     to{
-        translate: calc(-4*250px);
+        translate: calc(-4*250px); /*karrusellen har fire forskellige billeder, som hver er 250px bred*/
     }
 }
 

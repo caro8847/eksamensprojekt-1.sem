@@ -7,7 +7,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px 60px 40px 60px;
+    justify-content: center;
+    background-color: #C4CFBD;
+    margin: 0px 60px 40px 60px;
+    padding: 60px;
+    border-radius: 110px;
 }
 
 .about__text h2{
@@ -22,54 +26,75 @@
 .about__image img{
     height: auto;
     width: 80%;
-    border-radius: 50%/40%;
-}
-
-.about__image{
-    padding: 5px;
-    margin: auto;
+    min-width: 120px;
+    border-radius: 50%/40%; /*50% af bredden og 40% af højden er brugt til afrunding - oval*/
 }
 
 .about__skills-title{
     text-align: center;
-    padding: 0 0 0 0;
+    padding: 10px 30px;
 }
 
 /*css til karrusel fra: https://www.youtube.com/shorts/IU8gFtgSxDw */
 .about__carousel-wrapper{
     overflow: hidden;
     width: 100%;
-    margin: 15px 0 15px 0;
+    margin: 15px 0px 15px 0px;
 }
 
 .about__carousel-track{
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: 175px;
+    grid-auto-columns: 135px;
     justify-items: stretch;
     animation: animation 25s linear infinite;
 }
 
             /*husk at ændr keyframes når du ændre img width*/
 .about__carousel-track img{
-    width:175px;
-    height: 195px;
+    width:135px;
+    height: 155px;
     border-radius: 15px;
     object-fit: cover;
-    border: 1px solid #fff
 }
 
 @keyframes animation{
     to{
-        translate: calc(-10*175px);
+        translate: calc(-10*135px); /*karrusellen har 10 forskellige billeder, som hver er 135px bred*/
     }
+}
+
+.about__cta{
+    display: flex;
+    flex-direction: column;
+    background-color: #C4CFBD;
+    align-items: center;
+    padding: 60px;
+    margin-top: 10%;
+    text-align: center;
+}
+
+.about__cta--button{
+    background-color: #F8681D;
+    border: 2px solid #F8681D ;
+    color: #F5F3F3;
+    border-radius: 10px;
+    text-decoration: none;
+    text-align: center;
+    width: auto;
+    padding: 5px;
+    margin-top: 20px;
+}
+
+.about__cta--button:hover{
+    background-color: #F5F3F3;
+    color: #F8681D;
 }
 
 @media (min-width:635px){
     .about__info{
         display: flex;
         flex-direction: row;
-        padding: 0px 60px 40px 60px;
     }
 
     .about__text{
@@ -82,9 +107,8 @@
 
     .about__image img{
         height: auto;
-        width: 100%;
+        width: 80%;
         border-radius: 50%/40%;
     }
-
 }
    

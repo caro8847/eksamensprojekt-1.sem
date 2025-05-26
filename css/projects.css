@@ -3,18 +3,15 @@
     padding: 30px 30px 0px 30px;
 }
 
-.projects{
-    padding: 20px 60px 40px 60px;
-}
 .projects__text{
-    padding-right: 20px;
+    padding: 20px 60px 0px 60px;
 }
 
 .grid__container{
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /*grid__container er én kolonne*/
     gap: 20px;
-    padding-top: 40px;
+    padding: 40px 60px 0px 60px;
 }
 
 .grid__container > div {
@@ -29,7 +26,7 @@
 
 .grid__container > div img,
 .grid__container >div video {
-    max-width: 80%;
+    max-width: 100%;
     height: auto;
     border-radius: 10px;
     margin-bottom: 10px;
@@ -39,22 +36,66 @@
     text-align: center;
 }
 
-.grid__container--text{
-    padding: 10px 30px;
+.grid__container-text{
+    padding: 10px 0px;
     text-align: start;
 }
 
+.project-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* lidt luft mellem ikon og tekst */
+    padding-top: 15px;
+  }
+
+.project-info__item{
+    display: flex;
+}
+
+.project-info__icon{
+    height: 20px;
+    width: 20px;
+    flex-shrink: 0; /*forhindrer skalering - ikonerne forbliver samme størrelse*/
+}
+
 .projects__text--big-screen{
-    display: none;
+    display: none; /*teksten om hover er væk*/
+}
+
+.projects__cta{
+    display: flex;
+    flex-direction: column;
+    background-color: #C4CFBD;
+    align-items: center;
+    padding: 60px;
+    margin-top: 10%;
+    text-align: center;
+}
+
+.projects__cta--button{
+    background-color: #F8681D;
+    border: 2px solid #F8681D ;
+    color: #F5F3F3;
+    border-radius: 10px;
+    text-decoration: none;
+    text-align: center;
+    width: auto;
+    padding: 5px;
+    margin-top: 20px;
+}
+
+.projects__cta--button:hover{
+    background-color: #F5F3F3;
+    color: #F8681D;
 }
 
 /*startet selv, hjælp fra ChatGPT*/
 @media (min-width:1366px){
     .grid__container {
         display: grid;
-        aspect-ratio: 1 / 1; 
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(3, 1fr);
+        aspect-ratio: 1 / 1; /*gør grid kvadratisk*/
+        grid-template-columns: repeat(3, 1fr); /*3 kolonner, af lige stor størrelse*/
+        grid-template-rows: repeat(3, 1fr); /*3 rækker, af lige stor størrelse*/
         grid-template-areas:
         "project1 project1 project2"
         "productpic movingart project2"
@@ -63,7 +104,7 @@
     }
 
 
-    .grid__container > div {
+    .grid__container div {
         border-radius: 15px;
         overflow: hidden;
         padding: 10px;
@@ -101,18 +142,18 @@
     }
 
     .projects__text--big-screen{
-        display: flex;
+        display: flex; /*tekst om hover vises på stor skærm*/
     }
     
 
     /*ChatGPT*/
     .grid__container > div {
-        position: relative;
+        position: relative; /*referencepunkt for .grid__container-text*/
         overflow: hidden;
     }
     
-    .grid__container--text {
-        position: absolute;
+    .grid__container-text {
+        position: absolute; /*placerer ift. nærmeste relative element*/
         top: 10px;
         left: 10px;
         right: 10px;
@@ -129,7 +170,7 @@
     }
     
             /* Vises kun ved hover på projektet */
-    .grid__container > div:hover .grid__container--text {
+    .grid__container > div:hover .grid__container-text {
         opacity: 1;
         visibility: visible;
     }

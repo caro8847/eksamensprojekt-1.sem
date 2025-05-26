@@ -1,12 +1,11 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    border: 1px solid #F8681D;
-    
+    box-sizing: border-box;    
 }
+
 html{
-    height: 100%;
+    height: 100%; /*gør så min-height på body virker*/
 }
 
 
@@ -16,6 +15,10 @@ body{
     flex-direction: column;
     background-color: #F5F3F3;
     color: #1f1f1f
+}
+
+.nav__link--cta a{
+    color: #F8681D;
 }
 
 .nav__link--selected{
@@ -28,8 +31,8 @@ main{
     flex: 1;/*main flyder ekstra plads, så footer er i bunden*/
 }
 
-/*fluid typography lavet med chatGPT*/
-h1, h2, h3, h5{
+/*fluid typography lavet med chatGPT*/ /*skriftstørrelsen er x(vw)% af skærmens bredde, men har min. og maks.*/
+h1, h2, h3{
     font-family: "Poppins", sans-serif;
 }
 
@@ -53,6 +56,7 @@ p{
     font-size: 1rem; /* fast 16px, men kan også laves fluid om ønsket */
     font-weight: 400;
     color: #2A2A2A;
+    line-height: 150%;
 }  
 
 a{
@@ -77,13 +81,12 @@ nav ul{
     width: 100%;
     list-style: none;
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
 }
 
 nav li{
     height: 50px;
 }
+
 nav a{
     height: 100%;
     padding: 0px 30px;
@@ -92,6 +95,7 @@ nav a{
     align-items: center;
     color: #1f1f1f;
 }
+
 
 nav a:hover{
     text-decoration: underline;
@@ -136,7 +140,7 @@ nav a:hover{
     }
 }
 
-@media(max-width:635px){
+@media(max-width:635px){ /*skjuler links, og viser i stedet burgermenu*/
     .nav__link--hidden{
         display:none;
     }
@@ -148,7 +152,7 @@ nav a:hover{
 
 /*css til sidebar-karrusel overlap - med hjælp fra chatGPT*/
 body.sidebar-visible main {
-    padding-right: 250px; /* samme bredde som sidebar */
+    padding-right: 250px; /*giver plads til sidebar*/
 } 
 
 /*css til footer*/
@@ -157,18 +161,14 @@ footer{
     flex-direction: row;
     background-color: #C4CFBD;
     width: 100%;
-    margin-top: 30px;
     justify-content: space-between;
+    padding-bottom: 25px;
 }
 
-.footer__title{
-    margin: 10px 0 0 60px
+.footer__info{
+    margin:10px 0px 10px 60px
 }
 
-.footer__contact-info{
-    margin-left: 120px;
-    padding-bottom: 15px;
-}
 
 .footer__links{
     display: flex;
@@ -185,4 +185,34 @@ footer a{
     display: flex;
     align-items: center;
     color: #1f1f1f;
+}
+
+footer a:hover{
+    text-decoration: underline;
+    text-decoration-color: #F8681D;
+    text-decoration-thickness: 2px;
+}
+
+@media (max-width:635px){
+    footer{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer a{
+        text-align: center;
+    }
+
+    .footer__info{
+        margin: 0px 0px 10px 0px;
+        text-align: center;
+    }
+    
+
+    .footer__links{
+        order: -1;
+        align-items: center;
+        margin: 10px 0px 10px 0px
+    }
 }
