@@ -169,8 +169,8 @@ footer{
     display: flex;
     flex-direction: row;
     gap: 10px;
-    align-items: center;
     margin: 5px 0;
+    justify-content: space-between;
 }
 
 .footer__info{
