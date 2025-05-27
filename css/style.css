@@ -165,6 +165,14 @@ footer{
     padding-bottom: 25px;
 }
 
+.footer__line {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    margin: 5px 0;
+}
+
 .footer__info{
     margin:10px 0px 10px 60px
 }
@@ -182,7 +190,7 @@ footer a{
     height: 100%;
     padding: 0px 30px;
     text-decoration: none;
-    display: flex;
+    display: inline;
     align-items: center;
     color: #1f1f1f;
 }
@@ -193,6 +201,7 @@ footer a:hover{
     text-decoration-thickness: 2px;
 }
 
+
 @media (max-width:635px){
     footer{
         flex-direction: column;
@@ -202,6 +211,7 @@ footer a:hover{
 
     .footer a{
         text-align: center;
+        display: flex;
     }
 
     .footer__info{
@@ -214,5 +224,10 @@ footer a:hover{
         order: -1;
         align-items: center;
         margin: 10px 0px 10px 0px
+    }
+
+        .footer__line {
+        flex-direction: column;
+        align-items: center;
     }
 }
