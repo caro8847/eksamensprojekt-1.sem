@@ -1,4 +1,4 @@
-.about__title{
+.page-title{
     text-align: center;
     padding: 30px 30px 0px 30px;
 }
@@ -74,7 +74,7 @@
     text-align: center;
 }
 
-.about__cta--button{
+.about__cta-button{
     background-color: #F8681D;
     border: 2px solid #F8681D ;
     color: #F5F3F3;
@@ -86,7 +86,7 @@
     margin-top: 20px;
 }
 
-.about__cta--button:hover{
+.about__cta-button:hover{
     background-color: #F5F3F3;
     color: #F8681D;
 }
